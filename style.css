@@ -127,7 +127,7 @@ section .title::after{
     color: #fff;
 }
 
-/* menu btn styling */
+                                        /******** menu btn  **********/
 .menu-btn{
     color: #fff;
     font-size: 23px;
@@ -164,7 +164,8 @@ section .title::after{
 }
 
 
-/* home section styling */
+                                       /*********** Home section **********/
+
 .home{
     display: flex;
     background: url("images/second-min.jpg") no-repeat center;
@@ -214,7 +215,7 @@ section .title::after{
     background: none;
 }
 
-/* about section styling */
+                                    /**********  About Setion ***********/
 .about .title::after{
     content: "who i am";
 }
@@ -258,7 +259,7 @@ section .title::after{
     background: none;
 }
 
-/* services section styling */
+                            /*********** Services section  ************/
 .services, .teams{
     color:#fff;
     background: #111;
@@ -304,7 +305,7 @@ section .title::after{
     margin: 10px 0 7px 0;
 }
 
-/* skills section styling */
+                                    /********* skills section styling ***********/
 
 .skills .title::after{
     content: "what i know";
@@ -391,9 +392,26 @@ section .title::after{
     width: 20%;
 }
 .skills-content .right .Bootstrap::before{
-    width: 800%;
+    width: 80%;
 }
-/* teams section styling */
+
+/* hide content */
+
+
+.hideContent {
+    overflow: hidden;
+    line-height: 1em;
+    height: 2em;
+}
+
+.showContent {
+    line-height: 1em;
+    height: auto;
+}
+.skills .skills-content .left .kotlin::before {
+    width: 10%
+}
+                                    /******** teams section styling *********/
 .teams .title::after{
     content: "who with me";
 }
@@ -456,7 +474,7 @@ section .title::after{
     background: #40E0D0!important;
 }
 
-/* contact section styling */
+                                /********* contact section styling **********/
 .contact .title::after{
     content: "get in touch";
 }
@@ -551,7 +569,7 @@ section .title::after{
   color: #40E0D0;
   background: none;
 }
-/* footer section styling */
+                                /******* footer section ***********/
 footer{
     background: #111;
     padding: 15px 23px;
@@ -577,129 +595,48 @@ footer span a:hover{
 }
 
 
-/* responsive media query start */
-@media (max-width: 1104px) {
-    .about .about-content .left img{
-        height: 350px;
-        width: 350px;
-    }
+.footer{
+    background:#000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color: rgb(158, 150, 150);
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-family: arial;
+}
+.footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+li a{
+    color:white;
 }
 
-@media (max-width: 991px) {
-    .max-width{
-        padding: 0 50px;
-    }
+
+.footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+
 }
-@media (max-width: 947px){
-    .menu-btn{
-        display: block;
-        z-index: 999;
-    }
-    .menu-btn i.active:before{
-        content: "\f00d";
-    }
-    .navbar .menu{
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        left: -100%;
-        top: 0;
-        background: #111;
-        text-align: center;
-        padding-top: 80px;
-        transition: all 0.3s ease;
-    }
-    .navbar .menu.active{
-        left: 0;
-    }
-    .navbar .menu li{
-        display: block;
-    }
-    .navbar .menu li a{
-        display: inline-block;
-        margin: 20px 0;
-        font-size: 25px;
-    }
-    .home .home-content .text-2{
-        font-size: 70px;
-    }
-    .home .home-content .text-3{
-        font-size: 35px;
-    }
-    .home .home-content a{
-        font-size: 23px;
-        padding: 10px 30px;
-    }
-    .max-width{
-        max-width: 930px;
-    }
-    .about .about-content .column{
-        width: 100%;
-    }
-    .about .about-content .left{
-        display: flex;
-        justify-content: center;
-        margin: 0 auto 60px;
-    }
-    .about .about-content .right{
-        flex: 100%;
-    }
-    .services .serv-content .card{
-        width: calc(50% - 10px);
-        margin-bottom: 20px;
-    }
-    .skills .skills-content .column,
-    .contact .contact-content .column{
-        width: 100%;
-        margin-bottom: 35px;
-    }
+ul{
+    list-style-type: none;
 }
 
-@media (max-width: 690px) {
-    .max-width{
-        padding: 0 23px;
-    }
-    .home .home-content .text-2{
-        font-size: 60px;
-    }
-    .home .home-content .text-3{
-        font-size: 32px;
-    }
-    .home .home-content a{
-        font-size: 20px;
-    }
-    .services .serv-content .card{
-        width: 100%;
-    }
+
+.footer hr{
+    border: none;
+    background: #b5b5b5;
+}
+.copyright{
+    text-align: center;
 }
 
-@media (max-width: 500px) {
-    .home .home-content .text-2{
-        font-size: 50px;
-    }
-    .home .home-content .text-3{
-        font-size: 27px;
-    }
-    .about .about-content .right .text,
-    .skills .skills-content .left .text{
-        font-size: 19px;
-    }
-    .contact .right form .fields{
-        flex-direction: column;
-    }
-    .contact .right form .name,
-    .contact .right form .email{
-        margin: 0;
-    }
-    .right form .error-box{
-       width: 150px;
-    }
-    .scroll-up-btn{
-        right: 15px;
-        bottom: 15px;
-        height: 38px;
-        width: 35px;
-        font-size: 23px;
-        line-height: 38px;
-    }
-}
+
+
+
